@@ -1,12 +1,14 @@
 import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
+import { RouterLink, RouterLinkActive, RouterOutlet } from '@angular/router';
+import { FooterCompComponent } from './components/footer-comp/footer-comp.component';
+import { HeaderCompComponent } from './components/header-comp/header-comp.component';
+import { HomeComp } from './components/share/share-comps/share-comps.component';
 
 @Component({
   selector: 'app-root',
   standalone: true,
-  imports: [RouterOutlet],
+  imports: [RouterOutlet, RouterLink, RouterLinkActive, FooterCompComponent, HeaderCompComponent, HomeComp],
   templateUrl: './app.component.html',
-  styleUrl: './app.component.css'
 })
 export class AppComponent {
   title = 'NewConvert';
