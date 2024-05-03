@@ -29,8 +29,8 @@ export class ListF {
   template: `
         <div class="border border-slate-400 rounded-2xl my-2 p-2">
             <ul class="flex flex-col justify-center items-center p-3">
-                <ListHm [Child]="'Microsoft'" [iconClass]="'fa-brands fa-microsoft'" style="color: skyblue;"></ListHm>
-                <ListHm [Child]="'Steam'" [iconClass]="'fa-brands fa-steam'" style="color: slategray;"></ListHm>
+                <ListHm [RouterLink]="'/Microsoft'" [Child]="'Microsoft'" [iconClass]="'fa-brands fa-microsoft'" style="color: skyblue;"></ListHm>
+                <ListHm [RouterLink]="'/Steam'" [Child]="'Steam'" [iconClass]="'fa-brands fa-steam'" style="color: slategray;"></ListHm>
             </ul>
         </div>
   `

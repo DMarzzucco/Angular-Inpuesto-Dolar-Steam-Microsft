@@ -12,4 +12,15 @@ import { HomeComp } from './components/share/share-comps/share-comps.component';
 })
 export class AppComponent {
   title = 'NewConvert';
+
+  Menu: boolean = false;
+
+  abrirMenu() {
+    this.Menu = !this.Menu
+  }
+  closeMenu() {
+    this.Menu = false;
+  }
+
+
 }

@@ -16,7 +16,18 @@
   </div>
   <h1 class="text-2xl ">Elige tu plataforma</h1>
   <HomeComp></HomeComp>
-  <button onClick={abrirMenu}>Leer Antes</button>
+  @if (Menu === true){
+  <button class="hidden"></button>
+  }
+  @else{
+  <button (click)="abrirMenu()">Leer Antes</button>
+  }
+  @if (Menu === true){
+  <section>
+    <h1>este es el menu</h1>
+    <button (click)="closeMenu()">Cerrar</button>
+  </section>
+  }
   <!-- {abrirCard && <AdverHome onClick={closeMenu} />} -->
 </section>
 <app-footer-comp></app-footer-comp>
