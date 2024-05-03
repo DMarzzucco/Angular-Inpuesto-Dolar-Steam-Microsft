@@ -23,12 +23,25 @@
   <button (click)="abrirMenu()">Leer Antes</button>
   }
   @if (Menu === true){
-  <section>
-    <h1>este es el menu</h1>
-    <button (click)="closeMenu()">Cerrar</button>
-  </section>
+
+  <div (click)="closeMenu()"
+    class='absolute w-auto border border-red-400 bg-red-900 p-3 rounded-xl flex flex-col items-end '>
+    <button class='' (click)="closeMenu()">
+      <i class="fa-solid fa-circle-xmark"></i>
+    </button>
+    <div class='flex flex-col justify-center items-center'>
+      <h1 class='font-bold p-1 text-xl my-3'>IMPORTANTE</h1>
+      <p class='text-center'>
+        Los resultados obtenidos, son un aproximado cercano que se puede obtener. <br /> El total real
+        dependerá en sí de los impuestos implementados por el banco que se use.
+      </p>
+      <span class='font-bold my-3 text-center'>
+        Última Actualización <br /> 25-04-2022
+      </span>
+    </div>
+  </div>
+
   }
-  <!-- {abrirCard && <AdverHome onClick={closeMenu} />} -->
 </section>
 <app-footer-comp></app-footer-comp>
 <router-outlet></router-outlet>
